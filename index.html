@@ -11,7 +11,7 @@
       --beige: #f7f0e3;
       --gold:  #d4a84b;
       --blue:  #2e7ab5;
-      --teal:  #4ba5be;
+      --teal:  #4ba5be;h
       --red:   #c0392b;
       --white: #ffffff;
     }
@@ -31,14 +31,14 @@
 
     /* ── HEADER ── */
     .site-header{
-      background:var(--beige);
-      border-bottom:3px solid var(--navy);
+      background:transparent;
+      border-bottom:none;
       display:flex;align-items:center;justify-content:space-between;
-      padding:12px 20px;
-      position:sticky;top:0;z-index:100;
-      box-shadow:0 3px 0 var(--navy);
+      padding:16px 28px;
+      position:absolute;top:36px;left:0;right:0;z-index:100;
+      box-shadow:none;
     }
-    .header-logo{height:44px;width:auto}
+    .header-logo{height:44px;width:auto;filter:brightness(0) invert(1);mix-blend-mode:normal;}
     .header-badge{
       background:var(--gold);color:var(--navy);
       font-family:'Nunito',sans-serif;font-weight:900;font-size:.78rem;
@@ -51,7 +51,7 @@
     .hero{
       background:linear-gradient(150deg,#1a3555 0%,#1e4a75 60%,#2a5f8f 100%);
       color:var(--white);
-      padding:0 20px 44px;
+      padding:80px 20px 44px;
       display:flex;flex-direction:column;align-items:center;text-align:center;
       position:relative;overflow:hidden;
     }
@@ -64,7 +64,8 @@
       width:clamp(180px,45vw,240px);
       margin-top:-10px;margin-bottom:4px;
       position:relative;z-index:1;
-      filter:drop-shadow(0 8px 24px rgba(0,0,0,.45));
+      mix-blend-mode:multiply;
+      filter:drop-shadow(0 8px 24px rgba(0,0,0,.35));
     }
     .expo-pill{
       display:inline-flex;align-items:center;gap:6px;
